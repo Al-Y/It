@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 04.05.2014 21:22:14 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="thegame" name="com.mycompany.TheGame.Rulesforthedeadcell" table="rulesforthedeadcell">
+    <id name="map" type="int">
+      <column name="Map"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.mycompany.TheGame.Maps" fetch="select" insert="false" name="maps" update="false">
+      <column name="Map" not-null="true" unique="true"/>
+    </many-to-one>
+    <property name="cell" type="java.lang.Byte">
+      <column name="Cell"/>
+    </property>
+  </class>
+</hibernate-mapping>
