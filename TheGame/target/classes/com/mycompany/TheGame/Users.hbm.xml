@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 04.05.2014 21:22:14 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-  <class catalog="thegame" name="com.mycompany.TheGame.Users" table="users">
+  <class catalog="thegame" name="com.itransition.kursach.life.Users" table="users">
     <id name="id" type="java.lang.Integer">
       <column name="ID"/>
       <generator class="identity"/>
@@ -20,19 +20,19 @@
       <key>
         <column name="ToUser" not-null="true"/>
       </key>
-      <one-to-many class="com.mycompany.TheGame.Messages"/>
+      <one-to-many class="com.itransition.kursach.life.Messages"/>
     </set>
     <set inverse="true" name="messagesesForFromUser">
       <key>
         <column name="FromUser" not-null="true"/>
       </key>
-      <one-to-many class="com.mycompany.TheGame.Messages"/>
+      <one-to-many class="com.itransition.kursach.life.Messages"/>
     </set>
     <set inverse="true" name="mapses">
       <key>
         <column name="ForUser" not-null="true"/>
       </key>
-      <one-to-many class="com.mycompany.TheGame.Maps"/>
+      <one-to-many class="com.itransition.kursach.life.Maps"/>
     </set>
   </class>
 </hibernate-mapping>

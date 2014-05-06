@@ -1,10 +1,10 @@
 package hibernate;
 
-import com.mycompany.TheGame.RulesForTheDeadCell;
-import com.mycompany.TheGame.RulesForTheAliveCell;
-import com.mycompany.TheGame.Maps;
-import com.mycompany.TheGame.Users;
-import com.mycompany.TheGame.Messages;
+import com.mycompany.TheGame.model.RulesForTheDeadCell;
+import com.mycompany.TheGame.model.Users;
+import com.mycompany.TheGame.model.Messages;
+import com.itransition.kursach.life.Maps;
+import com.mycompany.TheGame.model.RulesForTheAliveCell;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 

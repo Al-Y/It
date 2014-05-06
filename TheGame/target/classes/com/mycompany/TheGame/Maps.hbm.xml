@@ -2,12 +2,12 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 04.05.2014 21:22:14 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-  <class catalog="thegame" name="com.mycompany.TheGame.Maps" table="maps">
+  <class catalog="thegame" name="com.itransition.kursach.life.Maps" table="maps">
     <id name="id" type="java.lang.Integer">
       <column name="ID"/>
       <generator class="identity"/>
     </id>
-    <many-to-one class="com.mycompany.TheGame.Users" fetch="select" name="users">
+    <many-to-one class="com.itransition.kursach.life.Users" fetch="select" name="users">
       <column name="ForUser" not-null="true"/>
     </many-to-one>
     <property name="title" type="string">
@@ -26,13 +26,13 @@
       <key>
         <column name="Map" not-null="true" unique="true"/>
       </key>
-      <one-to-many class="com.mycompany.TheGame.Rulesforthedeadcell"/>
+      <one-to-many class="com.itransition.kursach.Rulesforthedeadcell"/>
     </set>
     <set inverse="true" name="rulesforthealivecells">
       <key>
         <column name="Map" not-null="true" unique="true"/>
       </key>
-      <one-to-many class="com.mycompany.TheGame.Rulesforthealivecell"/>
+      <one-to-many class="com.itransition.kursach.Rulesforthealivecell"/>
     </set>
   </class>
 </hibernate-mapping>
