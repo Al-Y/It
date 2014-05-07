@@ -1,10 +1,6 @@
 package hibernate;
 
-import com.mycompany.TheGame.model.RulesForTheDeadCell;
-import com.mycompany.TheGame.model.Users;
-import com.mycompany.TheGame.model.Messages;
-import com.itransition.kursach.life.Maps;
-import com.mycompany.TheGame.model.RulesForTheAliveCell;
+import com.itransition.life.entities.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
@@ -19,8 +15,8 @@ public class HibernateUtil {
     static {
         try {         
           AnnotationConfiguration ac = new AnnotationConfiguration();         
-          ac.addAnnotatedClass(Maps.class).addAnnotatedClass(Messages.class).addAnnotatedClass(RulesForTheAliveCell.class)
-          .addAnnotatedClass(RulesForTheDeadCell.class).addAnnotatedClass(Users.class);                    
+          ac.addAnnotatedClass(Map.class).addAnnotatedClass(Message.class).addAnnotatedClass(RuleForTheAliveCell.class)
+          .addAnnotatedClass(RuleForTheDeadCell.class).addAnnotatedClass(User.class);                    
           sessionFactory = ac.configure().buildSessionFactory();
           
         } catch (Throwable ex) {
