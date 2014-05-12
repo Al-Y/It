@@ -4,15 +4,15 @@
  */
 package com.itransition.life.dao;
 
-import com.itransition.life.entities.User;
+import com.itransition.life.domain.User;
 
 /**
  *
  * @author Albina
  */
 public interface UserDao {
-    void save(User stock);
-    void update(User stock);
-    void delete(User stock);
+    void save(User user);
+    void update(User user);
+    void delete(Integer userId);
     User findByUserId(Integer userId);
 }

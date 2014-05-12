@@ -4,7 +4,7 @@
  */
 package com.itransition.life.dao;
 
-import com.itransition.life.entities.RuleForTheAliveCell;
+import com.itransition.life.domain.RuleForTheAliveCell;
 import java.util.List;
 
 /**

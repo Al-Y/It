@@ -4,7 +4,7 @@
  */
 package com.itransition.life.dao;
 
-import com.itransition.life.entities.Map;
+import com.itransition.life.domain.Map;
 
 /**
  *

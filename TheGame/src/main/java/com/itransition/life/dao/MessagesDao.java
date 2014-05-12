@@ -4,7 +4,7 @@
  */
 package com.itransition.life.dao;
 
-import com.itransition.life.entities.Message;
+import com.itransition.life.domain.Message;
 import java.util.List;
 
 /**
